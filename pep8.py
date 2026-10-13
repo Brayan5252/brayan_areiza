@@ -3,7 +3,8 @@ import tkinter as tk
 
 
 ventana = tk.Tk()
-ventana.title("Calculadora")
+ventana.title("mi primera calculadora" \
+"")
 
 posicion = 0
 
@@ -15,8 +16,8 @@ entrada_texto.grid(
     row=0,
     column=0,
     columnspan=4,
-    padx=5,
-    pady=5
+    padx=3,
+    pady=3,
 )
 
 
@@ -52,7 +53,7 @@ def calcular():
         posicion = 5
 
 
-# Botones numéricos
+
 boton_9 = tk.Button(
     ventana, text="9", width=5, height=2,
     command=lambda: insertar_valor(9)
@@ -94,7 +95,6 @@ boton_0 = tk.Button(
     command=lambda: insertar_valor(0)
 )
 
-# Botones de operaciones
 boton_igual = tk.Button(
     ventana, text="=", width=5, height=2,
     command=calcular
@@ -132,7 +132,8 @@ boton_division = tk.Button(
     command=lambda: insertar_valor("/")
 )
 
-# Ubicación de los botones
+
+
 boton_borrar.grid(row=1, column=0, padx=5, pady=2)
 boton_parentesis_1.grid(row=1, column=1, padx=5, pady=2)
 boton_parentesis_2.grid(row=1, column=2, padx=5, pady=2)
